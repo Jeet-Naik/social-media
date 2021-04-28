@@ -30,6 +30,7 @@ class ComposerStaticInit8a1278ce5f630080527b63be69640e31
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'TwitterAPIExchange' => __DIR__ . '/..' . '/j7mbo/twitter-api-php/TwitterAPIExchange.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

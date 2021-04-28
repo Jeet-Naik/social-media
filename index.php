@@ -3,6 +3,22 @@ require_once 'config.php ';
 
 $permissions = array('email'); // Optional permissions
 $fb_loginUrl = $helper->getLoginUrl(FB_CALLBACK_URL, $permissions);
+
+//twitter login link
+// create a new twitter connection object
+$connection = new TwitterOAuth(CONSUMER_KEY, CONSUMER_SECRET);
+
+// get the token from connection object
+$request_token = $connection->getRequestToken(OAUTH_CALLBACK); 
+
+// if request_token exists then get the token and secret and store in the session
+if($request_token){
+	$token = $request_token['oauth_token'];
+	$_SESSION['request_token'] = $token ;
+	$_SESSION['request_token_secret'] = $request_token['oauth_token_secret'];
+	// get the login url from getauthorizeurl method
+	$twitter_login_url = $connection->getAuthorizeURL($token);
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +97,9 @@ $fb_loginUrl = $helper->getLoginUrl(FB_CALLBACK_URL, $permissions);
              <p class="mt-20 mb-0">Don't have an account? <a href="register.html"> Create one here</a></p><br/>
              <a href="<?php echo htmlspecialchars($fb_loginUrl); ?>" class="btn btn-primary btn-block"> Login with <i class="fa fa-facebook-official"></i></a><br/>
              <a href="<?php echo $instagram->getLoginUrl() ?>" class="btn btn-danger btn-block"> Login with <i class="fa fa-instagram"></i></a> <br/>
-             <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="btn btn-primary btn-block"> Login with <i class="fa fa-twitter"></i></a><br/>
+             <?php if(isset($twitter_login_url)){ ?>
+             <a href="<?php echo htmlspecialchars($twitter_login_url); ?>" class="btn btn-primary btn-block"> Login with <i class="fa fa-twitter"></i></a><br/>
+             <?php } ?>
           </div>            
         </div>
       </div>

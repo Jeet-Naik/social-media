@@ -66,4 +66,17 @@ $instagram = new InstagramBasicDisplay([
     'appSecret' => '2d60f9cd176c249b28329c8e7f2dab22',
     'redirectUri' => 'https://2dumc7.expose.sh/social-media/success.php'
 ]);
+
+
+/**
+ * =======================================================================================
+ * Twitter Configuration
+ * =======================================================================================
+ */
+require_once('twitteroauth/OAuth.php');
+require_once('twitteroauth/twitteroauth.php');
+// define the consumer key and secet and callback
+define('CONSUMER_KEY', 'NcHHQgOlZ5669A4Nx83slaOGU');
+define('CONSUMER_SECRET', 'LjImKoLnUemMhW72hz22ju8L31lukma40lWsBwPhqP8xEB4415');
+define('OAUTH_CALLBACK', 'http://localhost/social-media/twitter_callback.php');
 ?>

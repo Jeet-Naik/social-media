@@ -1,24 +1,24 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => 'e8921d92cfa3dad1b613a870588368078a85cf65',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => 'e8921d92cfa3dad1b613a870588368078a85cf65',
     ),
     'espresso-dev/instagram-basic-display-php' => 
     array (
@@ -37,6 +37,15 @@
       array (
       ),
       'reference' => '38fd7187a6704d3ab14ded2f3a534ac4ee6f3481',
+    ),
+    'j7mbo/twitter-api-php' => 
+    array (
+      'pretty_version' => '1.0.6',
+      'version' => '1.0.6.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '443d22c53d621b3cc6b7e0c56daa60c5ada033f7',
     ),
   ),
 );
