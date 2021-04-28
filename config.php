@@ -73,6 +73,11 @@ $instagram = new InstagramBasicDisplay([
  * Twitter Configuration
  * =======================================================================================
  */
+/**
+ * Reference : https://blog.netgloo.com/2015/08/16/php-getting-latest-tweets-and-displaying-them-in-html/
+ */
+// Require J7mbo's TwitterAPIExchange library (used to retrive the tweets)
+// url : https://github.com/J7mbo/twitter-api-php
 require_once('twitteroauth/OAuth.php');
 require_once('twitteroauth/twitteroauth.php');
 // define the consumer key and secet and callback
