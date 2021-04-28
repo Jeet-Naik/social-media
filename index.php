@@ -2,7 +2,7 @@
 require_once 'config.php ';
 
 $permissions = array('email'); // Optional permissions
-$loginUrl = $helper->getLoginUrl('http://localhost/social-media/fb_callback.php', $permissions);
+$fb_loginUrl = $helper->getLoginUrl(FB_CALLBACK_URL, $permissions);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -78,9 +78,10 @@ $loginUrl = $helper->getLoginUrl('http://localhost/social-media/fb_callback.php'
                 <span>Log in</span>
                 <i class="fa fa-check"></i>
              </a>
-             <p class="mt-20 mb-0">Don't have an account? <a href="register.html"> Create one here</a></p>
-             <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="btn btn-primary btn-block"><i class="fab fa-facebook-square"></i> Log in with Facebook!</a><br/>
-             <a href="<?php echo $instagram->getLoginUrl() ?>" class="btn btn-primary btn-block"><i class="fab fa-facebook-square"></i> Log in with Instagram!</a> <br/>
+             <p class="mt-20 mb-0">Don't have an account? <a href="register.html"> Create one here</a></p><br/>
+             <a href="<?php echo htmlspecialchars($fb_loginUrl); ?>" class="btn btn-primary btn-block"> Login with <i class="fa fa-facebook-official"></i></a><br/>
+             <a href="<?php echo $instagram->getLoginUrl() ?>" class="btn btn-danger btn-block"> Login with <i class="fa fa-instagram"></i></a> <br/>
+             <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="btn btn-primary btn-block"> Login with <i class="fa fa-twitter"></i></a><br/>
           </div>            
         </div>
       </div>

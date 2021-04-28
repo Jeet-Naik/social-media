@@ -23,37 +23,34 @@
 </head>
 
 <body>
-
-<div class="content-wrapper profile-page">
-    <!-- User Info -->
-    <div class="row">
-    <div class="col-lg-12 mb-30">
-        <div class="card">
-        <div class="card-body">
-            <div class="user-bg" style="background: url(../assets/images/user-bg.jpg);">
-            <div class="user-info">
-                <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <!-- <div class="user-dp"><img src="<?php echo $_SESSION['fbProfilePicture'];?>" alt="No image found"></div> -->
-                    <div class="user-detail">
-                        <h2 class="name"><?php echo $profile['username'];  ?></h2>
-                        <p class="designation mb-0">Instagram ID  : <?php echo  $profile['id']; ?></p>
-                    </div>
-                </div>
-                </div>              
-            </div>              
-            </div>
-        </div>
-        </div>
-    </div>
-    </div>
-</div>
   <!--=================================
 wrapper -->
 
-<div class="content-wrapper">
+<div class="content-wrapper  profile-page">
     <div class="page-title">
       <div class="container">
+          <!-- User Info -->
+        <div class="row">
+        <div class="col-lg-12 mb-30">
+            <div class="card">
+            <div class="card-body">
+                <div class="user-bg" style="background: url(../assets/images/user-bg.jpg);">
+                <div class="user-info">
+                    <div class="row">
+                    <div class="col-lg-6 align-self-center">
+                        <!-- <div class="user-dp"><img src="<?php echo $_SESSION['fbProfilePicture'];?>" alt="No image found"></div> -->
+                        <div class="user-detail">
+                            <h2 class="name"><?php echo $profile['username'];  ?></h2>
+                            <p class="designation mb-0">Instagram ID  : <?php echo  $profile['id']; ?></p>
+                        </div>
+                    </div>
+                    </div>              
+                </div>              
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
         <div class="row">
             <div class="col-sm-6">
                 <h3 class="mb-0">Reading Your Instagram Feeds</h3><br/>

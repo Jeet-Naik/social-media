@@ -20,9 +20,12 @@
 </head>
 
 <body>
-
+<!--=================================
+wrapper -->
 <div class="content-wrapper profile-page">
-    <!-- User Info -->
+    <div class="page-title">
+      <div class="container">
+          <!-- User Info -->
     <div class="row">
     <div class="col-lg-12 mb-30">
         <div class="card">
@@ -44,12 +47,6 @@
         </div>
     </div>
     </div>
-</div>
-<!--=================================
-wrapper -->
-<div class="content-wrapper">
-    <div class="page-title">
-      <div class="container">
         <div class="row">
             <div class="col-sm-6">
                 <h3 class="mb-0">Reading Your Facebook Feeds</h3><br/>
@@ -61,9 +58,6 @@ wrapper -->
 /**
  * Display User feed posts content
  */
-// echo "<pre>";
-// print_r($posts);
-// echo "</pre>";die;
 if (! empty($posts)) {
     foreach ($posts as $k => $v) {
         $postDate = date("d F, Y", strtotime($posts[$k]["created_time"]))
@@ -87,7 +81,7 @@ if (! empty($posts)) {
 <?php
 }
 ?>
-<?php if ($posts[$k]["attach_type"] == 'profile_media'){
+<?php if ($posts[$k]["attach_type"] == 'profile_media') {
     ?>
     <!-- main body --> 
     <div class="container">   
@@ -100,14 +94,14 @@ if (! empty($posts)) {
               <p><?php if(!empty($posts[$k]["message"])) { echo $posts[$k]["message"]; } ?></p>
                 <p><strong>Post Date </strong><?php echo $postDate; ?></p>
             </div>
-          </div>   
+          </div> 
         </div>
     </div> 
   </div> 
 <?php
 }
 ?>
-<?php if ($posts[$k]["attach_type"] == 'photo'){
+<?php if ($posts[$k]["attach_type"] == 'photo') {
     ?>
     <!-- main body --> 
     <div class="container">   

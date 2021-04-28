@@ -21,6 +21,14 @@ use Facebook\Exceptions\FacebookSDKException;
 $appId = "545817282468363";
 $appSecret = "39ad7ecc7694270748319458521e02a3";
 
+define('FB_CALLBACK_URL','http://localhost/social-media/fb_callback.php');
+/**
+ * Create an website application
+ * Add facebook login product and create application and get appid & app secret
+ * Set OAuth url same as redirect url : it automatically allows localgost
+ */
+
+
 $fb = new Facebook(array(
     'app_id' => $appId, // Replace with your app id
     'app_secret' => $appSecret ,  // Replace with your app secret
@@ -56,6 +64,6 @@ use EspressoDev\InstagramBasicDisplay\InstagramBasicDisplay;
 $instagram = new InstagramBasicDisplay([
     'appId' => '955152668565474',
     'appSecret' => '2d60f9cd176c249b28329c8e7f2dab22',
-    'redirectUri' => 'https://pvtqhf.expose.sh/social-media/success.php'
+    'redirectUri' => 'https://2dumc7.expose.sh/social-media/success.php'
 ]);
 ?>
